@@ -6,11 +6,13 @@ then
 	exit 1
 fi
 git commit -m 'Update'
+if [[ $? -ne 0 ]]
 then
 	echo "$(tput setaf 1)"'ERROR, exiting'"$(tput sgr 0)"
 	exit 1
 fi
 git push -u origin master
+if [[ $? -ne 0 ]]
 then
 	echo "$(tput setaf 1)"'ERROR, exiting'"$(tput sgr 0)"
 	exit 1
