@@ -1,5 +1,18 @@
+.body{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	padding: 0px 5% 0px 5% ;
+	background-color: lightgreen;
+}
+
+
 .half{
-	
-	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	width: 49%;
+	box-sizing: border-box;			/* s paddingem se nemeni velikost divu */
+	margin: 0px;
+	padding: 2%;
 	background-color: blue;
+	color: white;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
