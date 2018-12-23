@@ -21,3 +21,11 @@ body {
 	color: white;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.changeColorButton{
+	text-align: center;
+	display: inline-flex;
+	float: right;
+	padding: 20px;
+	cursor: pointer;
+	user-select: none;
+}	
