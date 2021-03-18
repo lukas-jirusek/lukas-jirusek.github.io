@@ -1,0 +1,122 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    clear: right;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+header div{
+    background-color: lime;
+    text-align: center;
+    padding: 10px;
+}
+nav a:hover{
+    background-color: rgb(0, 73, 0);
+    text-decoration: underline;
+}
+
+#produkty{
+    background-color: lime;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#produkty p{
+    clear: left;
+}
+
+figure{
+    transition: background-color 500ms ease-in-out;
+    object-fit: cover;
+    display: block;
+    width: 200px;
+    height: 200px;
+    float: left;
+    padding: 10px;
+    align-items: center;
+    border: 3px;
+    border-style: dotted;
+    border-color: white;
+    border-radius: 10%;
+    
+}
+section{
+    padding: 20px;
+}
+
+figure:hover{
+    transition: background-color 500ms ease-in-out;
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+
+#sluzby, #zamestnanci, #kontakt{
+    width: 50%;
+    margin: auto;
+}
+
+#sluzby li{
+    list-style-position: inside;
+    border-color: lightgreen;
+    border-width: 2px;
+    border-style: double;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#sluzby li:hover{
+    background-color: lime;
+}
+nav {
+    background-color: green;
+    padding: 35px;
+}
+nav a{
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    font-size: large;
+}
+
+th {
+    background-color : #333;
+    color : white;
+    padding : 10px 20px;
+}
+td {
+    padding : 0 15px;
+}
+table {
+    border : black solid 2px;
+}
+tr:hover{
+    background-color:lightgray;
+}
+footer{
+    padding: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+input, textarea{
+    display: block;
+    width: 100%;
+    align-self: center;
+    margin: 10px;
+    border-color: darkgreen;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+input[type=submit]{
+    background-color: darkgreen;
+    color: white;
+    font-weight: bold;
+}
