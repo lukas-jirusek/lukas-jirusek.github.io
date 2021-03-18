@@ -1,2 +1,1 @@
-pokus
-pokus2
+GitHub repo to: https://lukas-jirusek.github.io/
