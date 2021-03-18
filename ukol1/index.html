@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ukol 1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+
+    <!-- Facebook (Open Graph) metadata --> 
+    <!-- Test those tags at: https://developers.facebook.com/tools/debug/?q=https%3A%2F%2Flukas-jirusek.github.io%2F -->
+    <meta property="og:url"                content="https://lukas-jirusek.github.io/ukol1" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Znackovaci jazyky - Ukol 1" />
+    <meta property="og:description"        content="Ukol 1 ze znackovacich jazyku" />
+    <meta property="og:image"              content="https://shuttle.plnt.cz/app/uploads/2020/02/lev-robert_1-1536x1536-c-default.jpg" />
+    <meta property="og:image:width"        content="1536px" />  <!-- Required by Facebook debug tool -->
+    <meta property="og:image:height"       content="1536px" />  <!-- Required by Facebook debug tool -->
+    <meta property="fb:app_id"             content="966242223397117" />     <!-- Required by Facebook debug tool, using default app ID-->
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <section id="cislovany-seznam">
+        <h2>Cislovany seznam</h2>
+        <ol>
+            <li>Položka 1</li>
+            <li>Položka 2</li>
+            <li>Položka 3</li>
+            <li>Položka 4</li>
+        </ol>
+    </section>
+
+    <section id="necislovany-seznam">
+        <h2>Necislovany seznam</h2>
+        <ul>
+            <li>Položka 1</li>
+            <li>Položka 2</li>
+            <li>Položka 3</li>
+            <li>Položka 4</li>
+        </ul>    
+    </section>
+
+    <section id="seznam-definic">
+        <h2>Seznam definic</h2>
+        <dl>
+            <dt>Položka 1</dt>
+            <dd>Definice 1</dd>
+            <dt>Položka 2</dt>
+            <dd>Definice 2</dd>
+        </dl>
+    </section>
+
+    <section id="Fotogalerie">
+        <h2>Fotogalerie</h2>
+        <figure>
+            <img src="https://via.placeholder.com/200/FF0000/FFFFFF?text=Fig1">
+            <figcaption>Figura 1</figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://via.placeholder.com/200/0000FF/FFFFFF?text=Fig2">
+            <figcaption>Figura 2</figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://via.placeholder.com/200/008000/FFFFFF?text=Fig3">
+            <figcaption>Figura 3</figcaption>
+        </figure>
+    </section>
+
+    <section id="formular">
+        <h2>Formular</h2>
+        <form>
+            <p>
+                Jmeno: <input type="text" name="input_name" value="Sem zadejte jmeno"></input>
+            </p>
+            <p>
+                Vek: <input type="number" name="input_age" value="20">
+            </p>
+            <p>
+            <label for="input_message">Zprava: </label>
+            <textarea id="input_message" name="input_message" rows="6" cols="70">Text zpravy.</textarea>
+            </p>
+            <input type="submit" name="input_submit" value="Potvrdit">
+            
+        </form>
+    </section>
+
+</body>
+</html>
