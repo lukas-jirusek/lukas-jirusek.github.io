@@ -18,8 +18,8 @@ header{
 header a{
     color: white;
 }
-@media only screen and (max-width: 800px){
-    .column{
+@media only screen and (max-width: 1000px){
+    .column1, .column2{
         width: calc(100% - 2*20px);;
     }
 }
