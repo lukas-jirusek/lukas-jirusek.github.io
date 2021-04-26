@@ -1,0 +1,25 @@
+.column1 {
+    float: left;
+    width: calc(67% - 2*20px);
+    padding: 20px;
+}
+
+.column2 {
+    float: left;
+    width: calc(33% - 2*20px);
+    padding: 20px;
+}
+
+header{
+    padding: 20px;
+    background-color: darkred;
+}
+
+header a{
+    color: white;
+}
+@media only screen and (max-width: 800px){
+    .column{
+        width: calc(100% - 2*20px);;
+    }
+}

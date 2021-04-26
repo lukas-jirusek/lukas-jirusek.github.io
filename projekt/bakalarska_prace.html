@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Lukáš Jirůšek - Bakalářská práce</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+    <header>
+        <h1>Lukáš Jirůšek<br>Bakalářská práce</h1>
+    </header>
+    <aside>
+        <section>
+            <h4>Navigace</h4>
+            <nav>
+                <a href="#nazev">Název bakalářské práce</a>
+                <a href="#klicova-slova">Klíčová slova</a>
+                <a href="#cil">Cíl práce</a>
+                <a href="#metodika">Metodika</a>
+            </nav>
+        </section>
+        <section>
+            <h4>Užitečné odkazy</h4>
+            <ul>
+                <a href="http://wp.czu.cz/cs/index.php/?r=1071&mp=person.info&idClovek=7"><b>Vedoucí práce</b>
+                    <br>doc. Ing. Václav Vostrovský, Ph.D.</a>
+                <a href="https://katedry.czu.cz/kii/uvod"><b>Garantující pracoviště</b><br>Katedra informačního inženýrství</a>
+                <a href="bakalarska_prace_source.html"><b>Zdrojový kód této stránky</b></a>
+            </ul>
+
+        </section>
+        
+    </aside>
+
+    <main>
+        <article>
+            <section id="nazev">
+                <h2>Název bakalářské práce</h2>
+                <h3>Český název</h3>
+                <p>Agregace otevřených dat o počtu cizinců v České republice pomocí relačně databázové technologie</p>
+                <h3>Anglický název</h3>
+                <p>Aggregation of open data on number of foreigners in the Czech Republic using relation database technology</p>
+            </section>
+
+            <section id="klicova-slova">
+                <h2>Klíčová slova</h2>
+                <p>open data, agregace dat, relační databáze, cizinci v České republice, dotazovací jazyk SQL</p>                
+            </section>
+
+            <section id="cil">
+                <h2>Cíl práce</h2>
+                <p>
+                    Cílem této práce je navrhnout a vytvořit relační databázi pro ukládání dat o počtu cizinců v České republice. 
+                </p> 
+                <p>
+                    Dílčím cílem je také stáhnout data z <a href="https://data.gov.cz/datov%C3%A9-sady">Národního katalogu otevřených dat</a> 
+                    a tyto data vhodně zpracovat a nahrát je do databáze.       
+                </p>        
+                <p>
+                    Tato databáze pak umožní snadnou agregaci těchto dat, což také poslouží k vizualizaci těchto dat a vytvoření kartogramů.
+                </p>
+                <figure>
+                    <img alt="Screenshot stránky Národního katalogu otevřených dat", src="opendata.png", width="90%"></img>
+                    <figcaption style="font-weight: 100;">Screenshot stránky Národního katalogu otevřených dat</figcaption>
+                </figure>
+            </section>
+
+            <section id="metodika">
+                <h2>Metodika</h2>
+                <p>
+                    V teoretické části této práce budou popsány funkcionality a vlastnosti relačních databází a jazyka SQL.
+                </p> 
+                <p>
+                    Vlastní práce rozdělí do několika kroků, prvním z nich bude stažení a zpracování dat ve formátu CSV stažené z Národního katalogu otevřených dat. 
+                    K tomuto zpracování bude využit programovací jazyk Python.
+                </p>        
+                <p>
+                    Druhým krokem pak bude vytvoření databáze a chodného relačního schématu pro uložení těchto dat. 
+                    Tato databáze musí být normalizována, samotná databáze bude implementována knihovnou SQLite, především díky volné licenci a snadné integraci do 
+                    programovacího jazyka Python. Námi zpracována data pak budou do této databáze nahrána.
+                </p> 
+                <p>
+                    Dalším krokem je pak vytvoření vhodných agredačních dotazů nad těmito daty, ty budou například sčítat počty cizinců v jednotlivých krajích nebo okresech, 
+                    sčítat jednotlivé národnosti a nebo sledovat změnu počtu cizinců v čase.
+                </p> 
+                <p>
+                    Posledním krokem je pak využít tyto agragační dotazy k vytvoření kartogramůa případně vytvořit webovou stránku kde budou tyto data přehledně prezentována.
+                </p> 
+            </section>
+        </article>
+    </main>
+    
+    <footer>
+        <p>Autor: Lukáš Jirůšek, <a href="mailto:lukas.jirusek33@gmail.com">lukas.jirusek33@gmail.com</a></p>
+    </footer>
+</body>
+</html>

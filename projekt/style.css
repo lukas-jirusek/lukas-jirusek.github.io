@@ -1,0 +1,80 @@
+aside{
+    float: right;
+    width: 30%;
+    top: 0;
+    display: block;
+    position: sticky;
+    background-color: darkred;
+    color: white;
+    min-height: max-content;
+    overflow-y:auto;
+}
+body{
+    display: block;
+    font-size: larger;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main{
+    display: inline-block;
+    width: 50%;
+    margin: 0% 10% 0% 10%;
+    
+}
+
+section{
+    padding: 0px 20px 10px 20px;
+}
+header{
+    background-color: rgb(182, 36, 41);
+    padding: 20px 10% 20px 10%;
+    color: white;
+}
+
+ul{
+    padding: 0;
+}
+
+nav a, ul a{
+    display: block;
+    padding: 10px;
+    color: white;
+    font-size: medium;
+    text-decoration: none;
+    border-color: rgb(182, 36, 41);
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    margin: 5px;
+}
+
+nav a:hover, ul a:hover{
+    background-color: rgb(182, 36, 41);
+}
+
+footer{
+    background-color: black;
+    color: white;
+    font-weight: small;
+    padding: 10px;
+    padding-left: 50px;
+}
+footer a{
+    color: white;
+}
+
+/*on small screens move sticky sidebar to the top, unsticky it*/
+@media only screen and (max-width: 800px), (max-height: 600px){
+    aside{
+        width: 100%;
+        background-image: none;
+        position: unset;
+    }
+    main{
+        width: auto;
+    }
+    
+    aside section{
+        padding: 0% 10% 0% 10%;
+    }
+}
