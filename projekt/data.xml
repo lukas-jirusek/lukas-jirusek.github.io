@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<socialni_sit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+    <uzivatele>
+        <!-- 
+            uzivatele
+            povinne attributy:
+                id - unikatni identifikator
+                jmeno
+                prijmeni
+                email
+                aktivni - boolean oznacujici zda je ucet aktivni
+
+            nepovinne:
+                pohlavi - M / Z
+                telefon
+                datum_narozeni:
+                    den - 1-31
+                    mesic - 1-12
+                    rok - 1900+
+                narodnost
+                adresa :
+                    mesto
+                    ulice
+        -->
+        <uzivatel id="0">
+            <jmeno>Franta</jmeno>
+            <prijmeni>Novak</prijmeni>
+            <email>f.novak@gmail.com</email>
+            <aktivni>true</aktivni>
+
+            <pohlavi>M</pohlavi>
+        </uzivatel>
+
+        <uzivatel id="1">
+            <jmeno>Milada</jmeno>
+            <prijmeni>Cerna</prijmeni>
+            <email>miladka@seznam.cz</email>
+            <aktivni>true</aktivni>
+            
+            <pohlavi>Z</pohlavi>
+            <telefon>606123456</telefon>
+            <datum_narozeni>
+                <den>12</den>
+                <mesic>8</mesic>
+                <rok>1982</rok>
+            </datum_narozeni>
+            <narodnost>ceska</narodnost>
+        </uzivatel>
+
+        <uzivatel id="2">
+            <jmeno>Lukas</jmeno>
+            <prijmeni>Horak</prijmeni>
+            <email>horak_fighter1995@seznam.cz</email>
+            <aktivni>false</aktivni>
+
+            <datum_narozeni>
+                <den>3</den>
+                <mesic>9</mesic>
+                <rok>1995</rok>
+            </datum_narozeni>
+            <adresa>
+                <mesto>Kolin</mesto>
+                <ulice>Horakova</ulice>
+            </adresa>
+        </uzivatel>
+
+        <uzivatel id="3">
+            <jmeno>Klara</jmeno>
+            <prijmeni>Stastna</prijmeni>
+            <email>klarkaVecneVesela@gmail.cz</email>
+            <aktivni>true</aktivni>
+
+            <pohlavi>Z</pohlavi>
+            <telefon>606654321</telefon>
+        </uzivatel>
+
+        <uzivatel id="4">
+            <jmeno>Pavla</jmeno>
+            <prijmeni>Rybkova</prijmeni>
+            <email>rybkova.pavla@outlook.com</email>
+            <aktivni>true</aktivni>
+
+            <pohlavi>Z</pohlavi>
+            <narodnost>ceska</narodnost>
+        </uzivatel>
+
+        <uzivatel id="5">
+            <jmeno>Karel</jmeno>
+            <prijmeni>Motsik</prijmeni>
+            <email>karlito@gmail.com</email>
+            <aktivni>false</aktivni>
+
+            <pohlavi>M</pohlavi>
+            <datum_narozeni>
+                <den>30</den>
+                <mesic>11</mesic>
+                <rok>1997</rok>
+            </datum_narozeni>
+            <adresa>
+                <mesto>Louny</mesto>
+                <ulice>Podebradova</ulice>
+            </adresa>
+        </uzivatel>
+
+        <uzivatel id="6">
+            <jmeno>Petr</jmeno>
+            <prijmeni>Vohnicky</prijmeni>
+            <email>vohnicky@seznam.com</email>
+            <aktivni>true</aktivni>
+
+            <pohlavi>M</pohlavi>
+            <telefon>602875393</telefon>
+        </uzivatel>
+
+        <uzivatel id="7">
+            <jmeno>Aneta</jmeno>
+            <prijmeni>Jakesova</prijmeni>
+            <email>Jakeska@gmail.cz</email>
+            <aktivni>false</aktivni>
+            
+            <pohlavi>Z</pohlavi>
+            <telefon>606123456</telefon>
+            <datum_narozeni>
+                <den>12</den>
+                <mesic>8</mesic>
+                <rok>1982</rok>
+            </datum_narozeni>
+            <narodnost>ceska</narodnost>
+            <adresa>
+                <mesto>Zlin</mesto>
+                <ulice>Prazska</ulice>
+            </adresa>
+        </uzivatel>
+    </uzivatele>
+
+    <prispevky>
+        <prispevek id="0" id_uzivatele="0">
+            <cas_sdileni>2021-03-24T08:45:12</cas_sdileni>
+            <text>Muj prvni prispevek na teto strance !</text>
+            <likes>
+                <id_uzivatele>2</id_uzivatele>
+                <id_uzivatele>5</id_uzivatele>
+                <id_uzivatele>6</id_uzivatele>
+            </likes>
+            <odpovedi>
+                <odpoved id_uzivatele="2">
+                    <text>Tohle je zas muj prvni komentar!</text>
+                </odpoved>
+                <odpoved id_uzivatele="7">
+                    <text>Podle me zase tahle stranka za nic moc nestoji</text>
+                </odpoved>
+                <odpoved id_uzivatele="5">
+                    <text>Zdar pepo!</text>
+                </odpoved>
+            </odpovedi>
+        </prispevek>
+
+        <prispevek id="1" id_uzivatele="2">
+            <cas_sdileni>2021-03-24T10:31:01</cas_sdileni>
+            <text>Zdravim vsechny nove pratele! Jake mate dneska pocasi ?</text>
+            <likes>
+                <id_uzivatele>2</id_uzivatele>
+                <id_uzivatele>5</id_uzivatele>
+            </likes>
+            <odpovedi>
+                <odpoved id_uzivatele="2">
+                    <text>Dneska nic moc :/</text>
+                </odpoved>
+            </odpovedi>
+        </prispevek>
+
+        <prispevek id="2" id_uzivatele="3">
+            <cas_sdileni>2021-03-25T06:57:12</cas_sdileni>
+            <text>Dobre rano!</text>
+            <likes>
+                <id_uzivatele>2</id_uzivatele>
+                <id_uzivatele>4</id_uzivatele>
+                <id_uzivatele>6</id_uzivatele>
+                <id_uzivatele>7</id_uzivatele>
+            </likes>
+            <odpovedi>
+                <odpoved id_uzivatele="0">
+                    <text>Radsi bych jeste spal!</text>
+                </odpoved>
+                <odpoved id_uzivatele="7">
+                    <text>Taky ti preji dobre rano</text>
+                </odpoved>
+                <odpoved id_uzivatele="5">
+                    <text>Zdar pepo!</text>
+                </odpoved>
+            </odpovedi>
+        </prispevek>
+
+        <prispevek id="3" id_uzivatele="6">
+            <cas_sdileni>2021-03-25T18:45:42</cas_sdileni>
+            <text>Jak si tu zrusim ucet?</text>
+        </prispevek>
+
+        <prispevek id="4" id_uzivatele="3">
+            <cas_sdileni>2021-03-26T08:09:10</cas_sdileni>
+            <text>Dalsi krasny den!</text>
+            <likes>
+                <id_uzivatele>0</id_uzivatele>
+                <id_uzivatele>1</id_uzivatele>
+                <id_uzivatele>5</id_uzivatele>
+                <id_uzivatele>6</id_uzivatele>
+            </likes>
+            <odpovedi>
+                <odpoved id_uzivatele="2">
+                    <text>Dokonce nam i sviti slunicko!</text>
+                </odpoved>
+                <odpoved id_uzivatele="5">
+                    <text>Tak to tady prsi</text>
+                </odpoved>
+            </odpovedi>
+        </prispevek>
+
+        <prispevek id="5" id_uzivatele="1">
+            <cas_sdileni>2021-03-26T12:25:11</cas_sdileni>
+            <text>Mame nove stenatko! Je desne roztomile a zboznuje deti!</text>
+            <likes>
+                <id_uzivatele>0</id_uzivatele>
+                <id_uzivatele>1</id_uzivatele>
+                <id_uzivatele>3</id_uzivatele>
+                <id_uzivatele>7</id_uzivatele>
+                <id_uzivatele>6</id_uzivatele>
+            </likes>
+            <odpovedi>
+                <odpoved id_uzivatele="2">
+                    <text>Zavidim, taky bych rad pejska :(</text>
+                </odpoved>
+                <odpoved id_uzivatele="5">
+                    <text>Sice mam radsi kocky, ale at si deti pejska uziji!</text>
+                </odpoved>
+            </odpovedi>
+        </prispevek>
+
+        <prispevek id="6" id_uzivatele="4">
+            <cas_sdileni>2021-03-27T18:57:03</cas_sdileni>
+            <text>Dneska supr den, konecne jsme navstivili ten novy bazen ! Urcite se vratime!</text>
+            <likes>
+                <id_uzivatele>0</id_uzivatele>
+                <id_uzivatele>2</id_uzivatele>
+            </likes>
+            <odpovedi>
+                <odpoved id_uzivatele="2">
+                    <text>Ju tam jsem se taky chtelo podivat Pajo, rekni jestli to stoji za to vstupne?</text>
+                </odpoved>
+                <odpoved id_uzivatele="4">
+                    <text>Urcite ano, jdi tam co nejdriv, do konce dubna tam maji oteviraci slevu!</text>
+                </odpoved>
+                <odpoved id_uzivatele="2">
+                    <text>No tak to uz balim.</text>
+                </odpoved>
+            </odpovedi>
+        </prispevek>
+
+        <prispevek id="7" id_uzivatele="6">
+            <cas_sdileni>2021-03-29T09:04:44</cas_sdileni>
+            <text>Beru zpet, nakonec se mi tu zalibilo, tahle stranka je super!!</text>
+            <likes>
+                <id_uzivatele>0</id_uzivatele>
+                <id_uzivatele>1</id_uzivatele>
+                <id_uzivatele>6</id_uzivatele>
+            </likes>
+            <odpovedi>
+                <odpoved id_uzivatele="1">
+                    <text>Ja vedela ze se ti to tu zalibi !</text>
+                </odpoved>
+                <odpoved id_uzivatele="6">
+                    <text>jojo, ten kdo tuhle stranku udelal je genius!</text>
+                </odpoved>
+            </odpovedi>
+        </prispevek>
+
+        <prispevek id="8" id_uzivatele="0">
+            <cas_sdileni>2021-04-30T07:43:00</cas_sdileni>
+            <text>Nekdo dnes na projizdku na kole?</text>
+            <likes>
+                <id_uzivatele>2</id_uzivatele>
+                <id_uzivatele>3</id_uzivatele>
+            </likes>
+            <odpovedi>
+                <odpoved id_uzivatele="3">
+                    <text>ja se s tebou klidne nekam projedu, jen to nesmi mit daleko!</text>
+                </odpoved>
+                <odpoved id_uzivatele="0">
+                    <text>neboj, prihejhorsim te domu dotlacim! zavolam ti a domluvime se</text>
+                </odpoved>
+            </odpovedi>
+        </prispevek>
+
+        <prispevek id="9" id_uzivatele="6">
+            <cas_sdileni>2021-05-01T10:25:04</cas_sdileni>
+            <text>Dneska se mi narodila krasna dcerka, uvitejte Kristynku!</text>
+            <likes>
+                <id_uzivatele>0</id_uzivatele>
+                <id_uzivatele>2</id_uzivatele>
+                <id_uzivatele>3</id_uzivatele>
+                <id_uzivatele>4</id_uzivatele>
+                <id_uzivatele>7</id_uzivatele>
+                <id_uzivatele>5</id_uzivatele>
+            </likes>
+            <odpovedi>
+                <odpoved id_uzivatele="0">
+                    <text>Pani, Petre, gratuluji a preji mamince i miminku hodne zdravi!</text>
+                </odpoved>
+                <odpoved id_uzivatele="6">
+                    <text>Dekujeme!</text>
+                </odpoved>
+                <odpoved id_uzivatele="5">
+                    <text>Take se pridavam ke gratulujicim, gratuluju</text>
+                </odpoved>
+                <odpoved id_uzivatele="6">
+                    <text>Taky diky Karle!</text>
+                </odpoved>
+                <odpoved id_uzivatele="4">
+                    <text>Gratuluji!</text>
+                </odpoved>
+            </odpovedi>
+        </prispevek>
+    </prispevky>
+</socialni_sit>

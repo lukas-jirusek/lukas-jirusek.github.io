@@ -1,0 +1,35 @@
+body{
+    margin: 50px;
+
+}
+
+.profile{
+    padding: 20px;
+    background-color: rgb(235, 235, 235);
+    margin: 20px
+}
+
+.prispevek{
+    padding: 20px;
+    background-color: rgb(223, 221, 221);
+    margin: 20px
+}
+
+.deleted p{
+    text-decoration: line-through;
+}
+
+.odpovedi{
+    background-color: rgb(218, 218, 218);
+    padding: 20px;
+    margin: 20px
+}
+.odpoved{
+    background-color: rgb(196, 196, 196);
+    padding: 5px 20px 5px 20px;
+    margin: 5px 20px 5px 20px;
+}
+
+.odpoved .jmenoOdpoved{
+    font-weight: bolder;
+}

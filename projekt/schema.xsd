@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="socialni_sit">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="uzivatele"/>
+                <xs:element ref="prispevky"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="uzivatele">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="uzivatel" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="prispevky">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="prispevek" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="uzivatel">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- povinne -->
+                <xs:element name="jmeno" type="xs:string"/>
+                <xs:element name="prijmeni" type="xs:string"/>
+                <xs:element name="email" type="xs:string"/>
+                <xs:element name="aktivni" type="xs:boolean"/>
+                <!-- nepovinne -->
+                <xs:element ref="pohlavi" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="telefon" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="datum_narozeni" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="narodnost" minOccurs="0" maxOccurs="1" type="xs:string"/>
+                <xs:element ref="adresa" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:integer" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="adresa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="mesto" type="xs:string"/>
+                <xs:element name="ulice" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="den">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="1"/>
+                <xs:maxInclusive value="31"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>    
+
+    <xs:element name="mesic">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="1"/>
+                <xs:maxInclusive value="12"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="rok">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="1900"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>    
+
+    <xs:element name="datum_narozeni">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="den"/>
+                <xs:element ref="mesic"/>
+                <xs:element ref="rok"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="pohlavi">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="M"/>
+                <xs:enumeration value="Z"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="telefon">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="100000000"/>
+                <xs:maxInclusive value="999999999"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="prispevek">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cas_sdileni" type="xs:dateTime"/>
+                <xs:element name="text" type="xs:string"/>
+                <xs:element ref="likes" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="odpovedi" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:integer" use="required"/>
+            <xs:attribute name="id_uzivatele" type="xs:integer" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="likes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id_uzivatele" minOccurs="1" maxOccurs="unbounded" type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="odpovedi">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="odpoved" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="odpoved">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="text" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id_uzivatele" type="xs:integer"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
