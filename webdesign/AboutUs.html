@@ -24,12 +24,12 @@
             </div>
             
             <div class="searchbar">
-                <label>Zadejte hledaný výraz
-                    <form action="Search.html">
+                <form action="Search.html">
+                    <label>Zadejte hledaný výraz
                         <input class="searchinput" type="text">
-                        <input class="searchbutton" type="submit" value="&#x1F50E;">
-                    </form>
-                </label>
+                    </label>
+                    <input class="searchbutton" type="submit" value="&#x1F50E;">
+                </form>
             </div>
             
             <div class="navbar">
@@ -68,7 +68,7 @@
                 <section class="about-us-container">                    
                     
                     <figure class="about-us-person">
-                        <img src="images/person-red.png"/>
+                        <img src="images/person-red.png" alt="Developer icon"/>
                         <figcaption>
                             <p>Vase jmeno prosim</p>
                             <a href="mailto:username@studenti.czu.cz">Napsat e-mail</a>
@@ -76,7 +76,7 @@
                     </figure>
 
                     <figure class="about-us-person">
-                        <img src="images/person-green.png"/>
+                        <img src="images/person-green.png" alt="Developer icon"/>
                         <figcaption>
                             <p>Michail Utjaganov</p>
                             <a href="mailto:xutjm001@studenti.czu.cz">Napsat e-mail</a>
@@ -84,7 +84,7 @@
                     </figure>
 
                     <figure class="about-us-person">
-                        <img src="images/person-blue.png"/>
+                        <img src="images/person-blue.png" alt="Developer icon"/>
                         <figcaption>
                             <p>Lukáš Jirůšek</p>
                             <a href="mailto:xjirl030@studenti.czu.cz">Napsat e-mail</a>
@@ -99,14 +99,18 @@
                         K tomu můžete využít následující formulář.
                     </p>
                     <form action="ThankYou.html">
-                        <label>
-                            <p>Váš email:</p>
-                            <input type="email">
-                        </label>
-                        <label>
-                            <p>Vaše zpráva:</p>
-                            <input type="text">
-                        </label>
+                        <p>
+                            <label>
+                                Váš email:
+                                <input type="email">
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Vaše zpráva:
+                                <input type="text">
+                            </label>
+                        </p>
                         <p>Potvrdit:</p>
                         <input type="submit" value="Odeslat" />
                     </form>
