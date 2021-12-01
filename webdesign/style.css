@@ -53,6 +53,9 @@ html, body {
     background-color: var(--accent-color2);
     color: white;
     border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    font-kerning: 10;
 }
 
 .flex-navigation {
