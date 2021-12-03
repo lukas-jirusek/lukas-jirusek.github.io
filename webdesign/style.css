@@ -55,7 +55,6 @@ html, body {
     border-radius: 10px;
     font-size: 14px;
     font-weight: bold;
-    font-kerning: 10;
 }
 
 .flex-navigation {
@@ -134,18 +133,70 @@ html, body {
 .grid-article {
     display: grid;
     grid-template-areas: 
-        'arttitle arttitle date'
+        'titul titul date'
         'subtitle subtitle subtitle'
         'arttext arttext arttext'
         'tags tags author'
-        'submitcomment submitcomment submitcomment'
-        'comment comment comment';
+        'comment comment comment'
+        'submitcomment submitcomment submitcomment';
+}
+
+.about-project{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 
-.arttitle {
-    grid-area: arttitle;
+
+.about-project-left{
+    width: 80%;
+    padding-right: 40px;
+}
+
+.about-project-right{
+    margin: auto;
+}
+
+.githublink {
+    background-color: var(--accent-color2);
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px 7px;
+    margin: 5px;
+}
+.response-form-email{
+    background-color: white;
+    border-radius: 10px;
+    border-color: var(--accent-color2);
+    border-width: 2px;
+    border-style: solid;
+    width: 80%;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+.response-form-area{
+    background-color: white;
+    border-radius: 10px;
+    border-color: var(--accent-color2);
+    border-width: 2px;
+    border-style: solid;
+    width: 80%;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+    height: 200px;
+    margin: 20px;
+}
+
+.titul {
+    grid-area: titul;
     padding-left: 50px;
+    font-size: large;
 }
 
 .date {
@@ -167,6 +218,7 @@ html, body {
 
 .author {
     grid-area: author;
+    margin-left: auto;
 }
 
 .submitcomment {
@@ -185,11 +237,11 @@ html, body {
     justify-content: start;
 }
 
-
 .arttitle {
     grid-area: arttitle;
     text-align: left;
     margin-left: 1%;
+    font-size: x-large;
 }
 
 .artpreview {
@@ -245,12 +297,11 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
 }
 
 
 img {
-    max-width:100%;
+    width:100%;
 }
 
 figcaption{
@@ -292,10 +343,35 @@ figure{
     }
     
     .page-button {
-        width: 250px;
+        width: 240px;
     }
 }
 
+
+.grid-comment{
+    background-color: white;
+    border-radius: 10px;
+    border-color: var(--accent-color2);
+    border-width: 2px;
+    border-style: solid;
+    padding: 2%;
+    padding-left: 5%;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.comauthor{
+    margin: 0;
+}
+
+.comdate{
+    margin: 0;
+    font-size: small;
+}
+
+.comtext{
+    margin: 0;
+}
 
 /*following attributes are for mobile / small devices*/
 @media (max-width: 60em) {
@@ -316,6 +392,13 @@ figure{
         flex-direction: column;
         justify-content: center;
         align-items: center;     
+    }
+
+    .about-project{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;     
 
     }
 
@@ -323,12 +406,13 @@ figure{
         display: grid;
         grid-template-areas:
             'date date date'
-            'arttitle arttitle arttitle'
+            'titul titul titul'
             'subtitle subtitle subtitle'
             'arttext arttext arttext'
-            'tags tags author'
-            'submitcomment submitcomment submitcomment'
-            'comment comment comment';
+            'author author author'
+            'tags tags tags'
+            'comment comment comment'
+            'submitcomment submitcomment submitcomment';
     }
 
     .flex-bottom {

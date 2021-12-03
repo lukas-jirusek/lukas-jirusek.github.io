@@ -52,29 +52,42 @@
             </div>   
             
             <div class="main">
-
+                
+                <h2>O tomto projektu:</h2>
                 <section class="about-project">
-                    <h2>O tomto projektu:</h2>  
-                    <p>
-                        Tato webová stránka byla vytvořena jako zápočtový projekt pro předmět Webdesing na PEF ČZU, konkrétně v ZS 2021/2022.
-                    </p>  
-                    <p>
-                        Informace na tomto webu mohou ale nemusí být pravdivé, a proto autoři a hostitel této stránky nenesou 
-                        žádnou zopovědnost za informace které na tomto webu naleznete.
-                    </p>  
+                    <div class="about-project-left">
+                        
+                        <p>
+                            Tato webová stránka byla vytvořena jako zápočtový projekt pro předmět Webdesing na PEF ČZU, konkrétně v ZS 2021/2022.
+                        </p>  
+                        <p>
+                            Informace na tomto webu mohou ale nemusí být pravdivé, a proto autoři a hostitel této stránky nenesou 
+                            žádnou zopovědnost za informace které na tomto webu naleznete.
+                        </p>
+                        <p>
+                            Stránka byla validována přes W3C Markup a CSS Validation Service.
+                        </p>
+                    </div>
+                    <aside class="about-project-right">
+                        
+                        <form action="https://github.com/lukas-jirusek/lukas-jirusek.github.io/tree/master/webdesign">
+                            <input class="githublink" type="submit" value="Zobrazit zdrojový kód stránky">
+                        </form>
+                    </aside>
+                    
                 </section>
 
                 <h2>Náš developerský tým:</h2>
                 <section class="about-us-container">                    
-                    
+
                     <figure class="about-us-person">
-                        <img src="images/person-red.png" alt="Developer icon"/>
+                        <img src="images/person-blue.png" alt="Developer icon"/>
                         <figcaption>
-                            <p>Vase jmeno prosim</p>
-                            <a href="mailto:username@studenti.czu.cz">Napsat e-mail</a>
+                            <p>Lukáš Jirůšek</p>
+                            <a href="mailto:xjirl030@studenti.czu.cz">Napsat e-mail</a>
                         </figcaption>
                     </figure>
-
+                    
                     <figure class="about-us-person">
                         <img src="images/person-green.png" alt="Developer icon"/>
                         <figcaption>
@@ -84,10 +97,10 @@
                     </figure>
 
                     <figure class="about-us-person">
-                        <img src="images/person-blue.png" alt="Developer icon"/>
+                        <img src="images/person-red.png" alt="Developer icon"/>
                         <figcaption>
-                            <p>Lukáš Jirůšek</p>
-                            <a href="mailto:xjirl030@studenti.czu.cz">Napsat e-mail</a>
+                            <p>Michaela Komzáková</p>
+                            <a href="mailto:xkomm009@studenti.czu.cz">Napsat e-mail</a>
                         </figcaption>
                     </figure>
                 </section>
@@ -98,21 +111,21 @@
                         Chcete nás kontaktovat? Přidat návrh na vylepšení a nebo nás upozornit na chybu v článku?
                         K tomu můžete využít následující formulář.
                     </p>
-                    <form action="ThankYou.html">
+                    <form action="ThankYou.html" class="response-form">
                         <p>
                             <label>
-                                Váš email:
-                                <input type="email">
+                                <b>Váš email:</b> <br>
+                                <input type="email" placeholder="email@domain.com" class="response-form-email">
                             </label>
                         </p>
                         <p>
                             <label>
-                                Vaše zpráva:
-                                <input type="text">
+                                <b>Vaše zpráva:</b> <br>
+                                <textarea class="response-form-area" placeholder="Napište co máte na srdci."></textarea>
                             </label>
                         </p>
-                        <p>Potvrdit:</p>
-                        <input type="submit" value="Odeslat" />
+                        <input type="submit" value="Odeslat zprávu" class="page-button"/>
+                        
                     </form>
                 </section>
             </div>

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Semestrální práce Web Design</title>
         <link rel="stylesheet" href="style.css">
-            
+        <link rel="icon" href="images/icon.png">
     </head>
     
     <body>
@@ -55,7 +55,7 @@
                 <article>
                     <div class="grid-article">
                         
-                        <header class="arttitle">
+                        <header class="titul">
                             <h2>Letectvo USA eskortovalo ruská letadla poblíž aljašky</h2>
                         </header>
                         <p class="date">Vydáno: 11. 3. 2020</p>
@@ -80,7 +80,7 @@
                             </p>
                         </div>
                         <p class="author">Autor: Redakce webu AeroMag</p>
-                        <div class="submitcomment">
+                        <!-- <div class="submitcomment">
                             <h3>Komentáře:</h3>
                             <form>
                                 <label>Přidejte vlastní komentář
@@ -90,20 +90,43 @@
                                 <input class="sendmessage" type="submit" value="Odeslat" />
                             </form>
                         </div>
+                    -->
+                        
                         <div class="comment">
+                            <h3>Komentáře (2):</h3>
                             <div class="flex-articles">
                                 <div class="grid-comment">
-                                    <h3 class="comauthor">Pavel</h3>
+                                    <h4 class="comauthor">Pavel</h4>
                                     <p class="comdate">13. 3. 2020</p>
                                     <p class="comtext">Nemůžu tomu uvěřit.</p>
                                 </div>
                                 <div class="grid-comment">
-                                    <h3 class="comauthor">Karolína</h3>
+                                    <h4 class="comauthor">Karolína</h4>
                                     <p class="comdate">15. 3. 2020</p>
                                     <p class="comtext">Snad nebude válka :o</p>
                                 </div>
                             </div>
                         </div>
+                        <div class="submitcomment">
+                            <h4>Přidat vlastní komentář:</h4>
+                            <form class="response-form">
+                                <p>
+                                    <label>
+                                        <b>Vaše jméno:</b> <br>
+                                        <input type="email" value="" class="response-form-email">
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <b>Váš komentář:</b> <br>
+                                        <textarea class="response-form-area" placeholder="Napište co máte na srdci."></textarea>
+                                    </label>
+                                </p>
+                                <input type="submit" value="Odeslat komentář" class="page-button"/>
+                                
+                            </form>
+                        </div>
+
                     </div>
                 </article>
             </div>
