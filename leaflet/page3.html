@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet showcase</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Include Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Include Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar bg-success">
+        <div class="container">
+            <a class="navbar-brand text-white ps-3 fw-bold" href="./index.html">Leaflet showcase - geoJSON</a>
+
+            <div class="d-flex">
+                <a href="./page2.html" class="btn btn-outline-light me-3 btn-lg">Předchozí</a>
+                <a href="./page4.html" class="btn btn-outline-light btn-lg me-3">Další</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left half -->
+            <div class="col-md-6 container-fluid" style="height: 800px;" id="map">
+            </div>
+
+            <!-- Right half -->
+            <div class="col-md-6 p-3" style="height: 800px;">
+                <script src="https://gist.github.com/lukas-jirusek/84e9e7f27b5a48c8e38756d8ba4e903d.js"></script>
+                <a class="btn btn-primary" href="https://gist.github.com/lukas-jirusek/76e8ad5fac57f71f6e0834c0c118fe1b?short_path=356cfdd" target="_blank">Odkaz na geoJSON</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Your JavaScript code for the map -->
+    <script>
+        var map = L.map('map').setView([50.13132535222653, 14.374951555610279], 17);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        fetch('data.geojson')
+            .then(response => response.json())
+            .then(data => {
+                // Create a GeoJSON layer and add it to the map
+                L.geoJSON(data, {
+                    onEachFeature: function (feature, layer) {
+                        // Add a popup to each feature
+                        layer.bindPopup(feature.properties.Nazev); // You can customize this based on your GeoJSON structure
+                    }
+                }).addTo(map);
+
+
+                // Fit the map to the bounds of the GeoJSON layer
+                map.fitBounds(L.geoJSON(data).getBounds());
+            })
+            .catch(error => console.error('Error loading GeoJSON:', error));
+    </script>
+
+    <!-- Bootstrap JS (optional, if you need Bootstrap JavaScript features) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
