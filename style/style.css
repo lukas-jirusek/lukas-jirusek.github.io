@@ -1,31 +1,15 @@
-body {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	padding: 0px 5% 0px 5% ;
-	background-color: rgb(241, 241, 241);
+.fa {
+	padding: 20px;
+	font-size: 30px;
+	width: 30px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+	border-radius: 50%;
 }
 
-.mathematics{		/*.math pouziva defautne MathJax*/
-	background-color: white;
-	border: 2px solid rgb(0, 0, 0);
-	border-radius: 10px;
-	padding: 20px;
+
+.fa-linkedin {
+background: #007bb5;
+color: white;
 }
-.half{
-	display: inline-block;
-	vertical-align: top;
-	width: 49%;
-	box-sizing: border-box;			/* s paddingem se nemeni velikost divu */
-	margin: 0px;
-	padding: 2%;
-	background-color: blue;
-	color: white;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.changeColorButton{
-	text-align: center;
-	display: inline-flex;
-	float: right;
-	padding: 20px;
-	cursor: pointer;
-	user-select: none;
-}	
