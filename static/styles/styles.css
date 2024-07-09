@@ -1,0 +1,67 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.big-banner {
+    background-color: #222c33;
+    color: white;
+    padding: 100px 50px 80px 50px;
+    width: 100%;
+    z-index: 3;
+    position: relative; 
+}
+
+.small-banner {
+    background-color: #222c33;
+    color: white;
+    padding: 20px 50px 20px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    
+}
+
+.grid-button {
+    text-align: center;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    transition: background-color 0.3s;
+    width: 90%;
+    font-weight: 500;
+}
+.grid-button:hover {
+    background-color: #e2e6ea;
+}
+
+.grid-button i {
+    font-size: 6rem; /* Adjust the icon size as needed */
+    margin-bottom: 10px;
+}
+
+.blacklink {
+    color: black;
+    text-decoration: none !important;
+}
+
+.list-group-item{
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .grid-button i {
+        font-size: 4rem; /* Smaller icon size for mobile devices */
+    }
+
+    .big-banner {
+        padding: 100px 30px 80px 30px;
+    }
+
+    .small-banner{
+        padding: 20px 30px 20px 30px;
+    }
+}
